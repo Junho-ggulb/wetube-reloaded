@@ -1,0 +1,13 @@
+extends base
+
+block content
+    if errorMessage
+        p=errorMessage
+    form(method="POST")
+        input(type="text", name="username" placeholder="username" required)
+        input(type="password", name="password" placeholder="password" required)
+        input(type="submit" value="Join")
+        include partials/social-login
+    div.auth-switch 
+        span Dont't have an account? 
+        a(href="/join") Create one now &rarr;
